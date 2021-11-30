@@ -1,13 +1,13 @@
 .toggle-block {
   .item {
-    margin-bottom: 0.5em;
+    margin-bottom: 2.5rem;
     border: 1px solid $color-primary;
   }
 
   label {
     position: relative;
     margin-bottom: 0;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -18,8 +18,14 @@
 
     .heading {
       margin-bottom: 0;
-      font-size: 1em;
+      font-size: 1.75rem;
       color: $color-primary;
+      font-weight: 300;
+      span {
+        text-transform: uppercase;
+        padding-right: 2rem;
+        font-weight: initial;
+      }
     }
 
     i {
@@ -38,7 +44,6 @@
 
   .content {
     display: none;
-    text-align: justify;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
   }
 }

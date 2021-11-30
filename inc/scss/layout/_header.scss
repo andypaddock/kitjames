@@ -1,5 +1,5 @@
 .header {
-  height: 85vh;
+  height: 75vh;
 
   &__logo-box {
     position: absolute;
@@ -13,9 +13,33 @@
 
   &__text-box {
     position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__quote-box {
+    position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+  .hero {
+    height: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    @include backgroundCover;
+    background: rgb(4, 11, 46);
+    background: linear-gradient(
+      0deg,
+      rgba(4, 11, 46, 1) 0%,
+      rgba(4, 11, 46, 0) 40%
+    );
+  }
+  video#bgvideo {
+    border-radius: 0.5rem 0.5rem 0 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
   }
 }

@@ -1,15 +1,42 @@
-<?php
+<?php $heroImage = get_field('hero_image'); 
+$heroVideo = get_field('background_video');
+$heroMobile = get_field('mobile_video');
+$heroPoster = get_field('video_poster');?>
+<?php $heroSwitch = get_field('hero_type');
+            if ($heroSwitch == 'video'): ?>
 
-$heroImage = get_field('hero_image');
 
-?>
-
-<section class="hero-outer">
-
-    <div class="hero-image" style="background-image: url(<?php echo $heroImage;?>)"></div>
-    <canvas id='canvas' class="h-50"></canvas>
-    <div class="hero-title">
-        <?php get_template_part("inc/img/logo");?>
-        <h1 class="heading-hero"><?php the_field("hero_title"); ?></h1>
+<div class="hero">
+    <video playsinline autoplay muted loop poster="<?php echo $heroPoster['url'];?>" id="bgvideo">
+        <?php if ($heroMobile): ?>
+        <source src="<?php echo $heroMobile['url'];?>" type="video/mp4" media="all and (max-width: 480px)">
+        <?php endif; ?>
+        <source src="<?php echo $heroVideo['url'];?>" type="video/mp4">
+    </video>
+    <div class="header__text-box">
+        <h1 class="heading-<?php the_field('header_size'); ?>">
+            <span class="heading-<?php the_field('header_size'); ?>--main"><?php the_field('header'); ?></span>
+            <span class="heading-<?php the_field('header_size'); ?>--sub"><?php the_field('sub_header'); ?></span>
+        </h1>
     </div>
-</section>
+</div>
+
+<?php elseif ($heroSwitch == 'image'):?>
+<div class="hero" style="background-image: linear-gradient(
+      0deg,
+      rgba(4, 11, 46, 1) 20%,
+      rgba(4, 11, 46, 0) 50%
+    ),url(<?php echo $heroImage['url']; ?>)">
+    <div class="header__text-box">
+        <h1 class="heading-<?php the_field('header_size'); ?>">
+            <span class="heading-<?php the_field('header_size'); ?>--main"><?php the_field('header'); ?></span>
+            <span class="heading-<?php the_field('header_size'); ?>--sub"><?php the_field('sub_header'); ?></span>
+        </h1>
+    </div>
+    <div class="header__quote-box">
+        <blockquote><?php the_field('quote'); ?></blockquote>
+        <cite><?php the_field('cite'); ?></cite>
+    </div>
+
+</div>
+<?php endif;?>

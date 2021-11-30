@@ -16,8 +16,8 @@ body {
   &--main {
     display: block;
     font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 1.65rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -35,9 +35,9 @@ body {
 
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    letter-spacing: 1.75rem;
+    letter-spacing: 0.5rem;
     animation: moveInRight 1s ease-out;
 
     @include respond(phone) {
@@ -70,10 +70,15 @@ body {
   text-transform: uppercase;
 }
 
-.paragraph {
+.paragraph,
+p {
   font-size: $default-font-size;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+blockquote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
 }

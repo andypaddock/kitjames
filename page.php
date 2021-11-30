@@ -101,8 +101,7 @@ get_header(); ?>
     </section>
 
     <section class="section-boxed-links">
-
-        <div class="row">
+        <div class="row w80">
             <div class="col">
                 <div class="feature-box">
                     <i class="feature-box__icon icon-basic-world"></i>
@@ -134,34 +133,26 @@ get_header(); ?>
     </section>
 
 
-    <section class="faq-block">
-        <div class="row">
-            <div class="col toggle-block">
+    <?php if( have_rows('main_page_elements') ): ?>
+    <?php while( have_rows('main_page_elements') ): the_row(); ?>
+    <?php if( get_row_layout() == 'faq_blocks' ): ?>
+    <?php get_template_part('template-parts/faqblock');?>
+    <?php elseif( get_row_layout() == 'image' ): 
+            $image = get_sub_field('image');
+            ?>
+    <figure>
+        <?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
+        <figcaption><?php echo $image['caption']; ?></figcaption>
+    </figure>
+    <?php endif; ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
 
 
-                <?php if( have_rows('faq_block') ): 
-                     while ( have_rows('faq_block') ) : the_row(); ?>
-
-                <div class="item">
-
-                    <label class="collapsed">
-                        <i class="fas fa-angle-right"></i>
-                        <h3 class="heading"><span
-                                class="highlight-letter"><?php the_sub_field('letter'); ?></span><?php the_sub_field('title'); ?>
-                        </h3>
-                    </label>
-                    <div class="content mb2">
-                        <?php the_sub_field('description'); ?>
-                    </div>
-
-                </div>
-
-                <?php $count++; endwhile; endif; ?>
 
 
-            </div>
-        </div>
-    </section>
+
+
 
 
 
