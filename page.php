@@ -137,13 +137,8 @@ get_header(); ?>
     <?php while( have_rows('main_page_elements') ): the_row(); ?>
     <?php if( get_row_layout() == 'faq_blocks' ): ?>
     <?php get_template_part('template-parts/faqblock');?>
-    <?php elseif( get_row_layout() == 'image' ): 
-            $image = get_sub_field('image');
-            ?>
-    <figure>
-        <?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
-        <figcaption><?php echo $image['caption']; ?></figcaption>
-    </figure>
+    <?php elseif( get_row_layout() == 'text_blocks' ):?>
+    <?php get_template_part('template-parts/text');?>
     <?php endif; ?>
     <?php endwhile; ?>
     <?php endif; ?>

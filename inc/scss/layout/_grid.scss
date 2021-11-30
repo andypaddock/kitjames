@@ -2,13 +2,13 @@
   max-width: $grid-width;
   margin: 0 auto;
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
+  // &:not(:last-child) {
+  //   margin-bottom: $gutter-vertical;
 
-    @include respond(tab-port) {
-      margin-bottom: $gutter-vertical-small;
-    }
-  }
+  //   @include respond(tab-port) {
+  //     margin-bottom: $gutter-vertical-small;
+  //   }
+  // }
 
   @include respond(tab-port) {
     max-width: 50rem;
@@ -66,6 +66,10 @@
 }
 section {
   margin: 3rem 0;
+  .w40 {
+    width: 40%;
+    margin: 0 auto;
+  }
   .w50 {
     width: 50%;
     margin: 0 auto;
