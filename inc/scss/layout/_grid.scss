@@ -64,22 +64,24 @@
     );
   }
 }
-section {
-  margin: 3rem 0;
-  .w40 {
-    width: 40%;
-    margin: 0 auto;
-  }
-  .w50 {
-    width: 50%;
-    margin: 0 auto;
-  }
-  .w60 {
-    width: 60%;
-    margin: 0 auto;
-  }
-  .w80 {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
+
+// @include respond(tab-land) {
+//   section {
+//     .w40 {
+//       width: 40%;
+//       margin: 0 auto;
+//     }
+//     .w50 {
+//       width: 50%;
+//       margin: 0 auto;
+//     }
+//     .w60 {
+//       width: 60%;
+//       margin: 0 auto;
+//     }
+//     .w80 {
+//       width: 80%;
+//       margin: 0 auto;
+//     }
+//   }
+// }
