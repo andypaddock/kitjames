@@ -139,6 +139,8 @@ get_header(); ?>
     <?php get_template_part('template-parts/faqblock');?>
     <?php elseif( get_row_layout() == 'text_blocks' ):?>
     <?php get_template_part('template-parts/text');?>
+    <?php elseif( get_row_layout() == 'tabbed' ):?>
+    <?php get_template_part('template-parts/tabs');?>
     <?php endif; ?>
     <?php endwhile; ?>
     <?php endif; ?>
