@@ -33,10 +33,20 @@ $heroPoster = get_field('video_poster');?>
             <span class="heading-<?php the_field('header_size'); ?>--sub"><?php the_field('sub_header'); ?></span>
         </h1>
     </div>
+    <?php $quoteSwitch = get_field('quote_type');
+            if ($quoteSwitch == 'quote'): ?>
+
     <div class="header__quote-box">
         <blockquote><?php the_field('quote'); ?></blockquote>
         <cite><?php the_field('cite'); ?></cite>
     </div>
+    <?php elseif ($quoteSwitch == 'fade'):?>
 
+    <div class="header__quote-box text-fade">
+        <blockquote><?php the_field('fade_text_initial'); ?></blockquote>
+        <blockquote><?php the_field('fade_text_second'); ?></blockquote>
+    </div>
+    <?php endif; ?>
+    <?php get_template_part('template-parts/moretext');?>
 </div>
 <?php endif;?>

@@ -12,17 +12,9 @@
   }
 
   &__text-box {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
   }
   &__quote-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
   }
   .hero {
@@ -35,11 +27,78 @@
       rgba(4, 11, 46, 1) 0%,
       rgba(4, 11, 46, 0) 40%
     );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   video#bgvideo {
     border-radius: 0.5rem 0.5rem 0 0;
     right: 0;
     bottom: 0;
     width: 100%;
+  }
+}
+.text-fade {
+  position: relative;
+
+  blockquote {
+    margin: 0;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeInOutText 24s;
+    opacity: 0;
+
+    &:first-child {
+      opacity: 1;
+      // Different animation for first item
+      // So it doesnt animate in
+      animation: fadeOutText 24s;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 4s;
+    }
+  }
+}
+
+@keyframes fadeInOutText {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutText {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

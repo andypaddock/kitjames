@@ -42,9 +42,6 @@ add_action('wp_before_admin_bar_render', 'kitjames_manage_admin_bar');
 function kitjames_scripts() {
 	wp_enqueue_style( 'kitjames-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
 	wp_enqueue_script( 'kitjames-core-js', get_template_directory_uri() . '/inc/js/compiled.js', array('jquery'), filemtime( get_stylesheet_directory() . '/inc/js/compiled.js' ), true);
-	// wp_enqueue_script( 'kitjames-intersection-js', get_template_directory_uri() . '/inc/js/intersection.js', array('jquery'), false, true);
-	wp_enqueue_script( 'anime-js', '//cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js', array(), true); 
-    wp_enqueue_script( 'lodash-js', '//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js', array(), true); 
 }
 
 add_filter( 'script_loader_tag', function ( $tag, $handle ) {
@@ -122,6 +119,9 @@ function kitjames_manage_admin_bar(){
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('comments');
 }
+
+/**= Add Custom Post Types and Taxonomies =**/
+require_once ('custom-post-types.php');
 
 /* ADD CUSTOM RESPONSIVE IMAGE SIZES
 ================================================== */

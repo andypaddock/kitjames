@@ -26,6 +26,10 @@ get_header(); ?>
     <?php get_template_part('template-parts/title');?>
     <?php elseif( get_row_layout() == 'feature_boxes' ):?>
     <?php get_template_part('template-parts/boxes');?>
+    <?php elseif( get_row_layout() == 'testimonial_block' ):?>
+    <?php get_template_part('template-parts/testimonial_block');?>
+    <?php elseif( get_row_layout() == 'testimonial_slider' ):?>
+    <?php get_template_part('template-parts/testimonial');?>
     <?php endif; ?>
     <?php endwhile; ?>
     <?php endif; ?>

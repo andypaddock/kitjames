@@ -1,6 +1,8 @@
+//@prepros-prepend mixitup.min.js
+//@prepros-prepend mixitup-pagination.js
 //@prepros-prepend jquery.magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
-
+//@prepros-prepend readmore.js
 
 jQuery(document).ready(function($) {
   /* ADD CLASS ON LOAD*/
@@ -375,9 +377,20 @@ $(".toggle-block label").click(function () {
   $(this).next().slideToggle();
 });
 
+// ============ Carousels
+ 
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  center:true,
+  nav:true,
+  items:1,
+  autoplay:true,
+    autoplayTimeout:6000,
+    autoplayHoverPause:true
+})
 
-
-
+new Readmore('article');
 
 
 }); //Don't remove ---- end of jQuery wrapper
@@ -385,3 +398,9 @@ $(".toggle-block label").click(function () {
 
 
 
+
+var mixer = mixitup('.testimonial-grid', {
+    controls: {
+        toggleLogic: 'and'
+    }
+});

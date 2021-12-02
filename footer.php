@@ -5,18 +5,30 @@
  */
 ?>
 
+
 <footer class="footer">
-    <div class="footer__logo-box">
-
-        <picture class="footer__logo">
-            <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"
-                src="img/logo-green-2x.png">
-        </picture>
+    <?php $footerSwitch = get_field('footer_override');
+            if ($footerSwitch == 'alternate'): ?>
 
 
+
+    <?php elseif ($footerSwitch == 'main'):?>
+    <?php $footerImage = get_field('footer_image','options'); ?>
+
+    <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
+        <!-- <div class="footer__text-box">
+            <h1 class="heading-secondary">
+                <span class="heading-secondary--main"><?php the_field('footer_header','options'); ?></span>
+                <span class="heading-secondary--sub"><?php the_field('footer_sub_header','options'); ?></span>
+            </h1>
+        </div>
+        <div class="header__quote-box">
+            <blockquote><?php the_field('quote'); ?></blockquote>
+            <cite><?php the_field('cite'); ?></cite>
+        </div> -->
 
     </div>
+    <?php endif;?>
 
 </footer>
 <?php wp_footer(); ?>
