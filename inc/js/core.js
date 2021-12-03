@@ -375,7 +375,12 @@ $(".toggle-block label").click(function () {
   otherLabels.next().slideUp();
   $(this).toggleClass("collapsed");
   $(this).next().slideToggle();
+  $('.arrow').toggleClass("active");
+  $(this).children('.arrow').addClass('active');
 });
+// $('.arrow').on('click', function() {
+//   $(this).toggleClass('active');
+// });
 
 // ============ Carousels
  
@@ -391,6 +396,26 @@ $('.owl-carousel').owlCarousel({
 })
 
 new Readmore('article');
+
+$(document).ready(function() {
+
+  function toggleSidebar() {
+    $(".button").toggleClass("active");
+    $("main").toggleClass("move-to-left");
+    $(".sidebar-item").toggleClass("active");
+  }
+
+  $(".button").on("click tap", function() {
+    toggleSidebar();
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      toggleSidebar();
+    }
+  });
+
+});
 
 
 }); //Don't remove ---- end of jQuery wrapper

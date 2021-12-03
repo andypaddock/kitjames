@@ -42,13 +42,29 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <section class="navigation">
+    <div class="nav-right visible-xs">
+        <div class="button" id="btn">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+    </div>
 
-    </section>
-    <header class="header">
-
-
-        <?php get_template_part('template-parts/hero');?>
-    </header>
     <main>
+        <nav>
+            <div class="nav-right hidden-xs">
+                <div class="button" id="btn">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+            </div>
+            <!-- nav-right -->
+        </nav>
+        <header class="header">
+
+
+            <?php get_template_part('template-parts/hero');?>
+        </header>
+
         <!--closes in footer.php-->

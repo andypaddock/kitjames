@@ -68,6 +68,9 @@ body {
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
+  &.light {
+    font-weight: 200;
+  }
 }
 .heading-highlight {
   color: $color-primary;

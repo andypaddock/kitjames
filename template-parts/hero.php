@@ -47,6 +47,11 @@ $heroPoster = get_field('video_poster');?>
         <blockquote><?php the_field('fade_text_second'); ?></blockquote>
     </div>
     <?php endif; ?>
-    <?php get_template_part('template-parts/moretext');?>
+    <?php $mainBlocks = get_field('main_link_boxes');
+            if ($mainBlocks == 'yes'): ?>
+    <div class="main_links"><?php get_template_part('template-parts/main-boxes');?></div>
+    <?php else:?>
+    <div class="down_arrow"></div>
+    <?php endif; ?>
 </div>
 <?php endif;?>

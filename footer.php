@@ -6,6 +6,7 @@
 ?>
 
 
+
 <footer class="footer">
     <?php $footerSwitch = get_field('footer_override');
             if ($footerSwitch == 'alternate'): ?>
@@ -31,6 +32,15 @@
     <?php endif;?>
 
 </footer>
+</main>
+<div class="sidebar">
+    <ul class="sidebar-list">
+        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 1</a></li>
+        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 2</a></li>
+        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 3</a></li>
+        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 4</a></li>
+    </ul>
+</div>
 <?php wp_footer(); ?>
 </body>
 
