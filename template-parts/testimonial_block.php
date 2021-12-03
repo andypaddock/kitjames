@@ -45,7 +45,26 @@ $counter++;
                 <h2 class="heading-highlight"><?php the_title(); ?></h2>
                 <div class="popup" id="popup<?php echo ($counter); ?>">
                     <div class="popup__content">
-                        <!-- <div class="popup__left">
+
+                        <?php $contentType = get_field('testimonial_type');
+                        if ($contentType == 'external'): ?>
+                        <div class="popup__full">
+                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <div class="embed-container">
+                                <?php the_field('embed_video'); ?></div>
+                        </div>
+
+                        <?php elseif ($contentType == 'video') :?>
+                        <?php $testVideo = get_field('video_file'); ?>
+                        <div class="popup__full">
+                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <video playsinline controls autoplay muted loop poster="<?php echo $heroPoster['url'];?>"
+                                id="bgvideo">
+                                <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
+                            </video>
+                        </div>
+                        <?php else:?>
+                        <div class="popup__left">
                             <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
                             <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
                         </div>
@@ -56,13 +75,8 @@ $counter++;
                                 <?php the_field('text_content');?>
                             </p>
                             <a href="#" class="btn btn--green">Contact</a>
-                        </div> -->
-                        <div class="popup__full">
-                            <a href="#testimonial-section" class="popup__close">&times;</a>
-                            <div class="embed-container">
-                                <?php the_field('embed_video'); ?></div>
                         </div>
-
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
