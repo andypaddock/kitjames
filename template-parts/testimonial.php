@@ -18,7 +18,11 @@ $mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
             <div class="quote">
                 <?php get_template_part("inc/img/quote"); ?>
                 <p class="copy"><?php the_field('text_content');?></p>
-                <p class="attrib"><?php the_title(); ?></p>
+                <div class="centre-line">
+                    <div class="line"></div>
+                    <div></div>
+                </div>
+                <p class="quote-cite"><?php the_title(); ?></p>
 
             </div>
 
@@ -26,5 +30,15 @@ $mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
 wp_reset_postdata();
 ?>
         </div>
+        <?php 
+$link = get_field('testimonial_link', 'options');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+        <a class="button" href="<?php echo esc_url( $link_url ); ?>"
+            target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+        <?php endif; ?>
     </div>
 </section>

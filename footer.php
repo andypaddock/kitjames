@@ -34,13 +34,16 @@
 </footer>
 </main>
 <div class="sidebar">
-    <ul class="sidebar-list">
-        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 1</a></li>
-        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 2</a></li>
-        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 3</a></li>
-        <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 4</a></li>
-    </ul>
+    <?wp_nav_menu( array( 
+                        'theme_location' => 'mobile-menu',
+                        'container' => false,
+                        'menu_class' => 'sidebar-list',
+                        'list_item_class'  => 'sidebar-item',
+    'link_class'   => 'sidebar-anchor'
+					) ); ?>
 </div>
+
+
 <?php wp_footer(); ?>
 </body>
 

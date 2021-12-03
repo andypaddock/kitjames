@@ -1,5 +1,16 @@
 .header {
-  height: 75vh;
+  &.v25 {
+    height: 25vh;
+  }
+  &.v50 {
+    height: 50vh;
+  }
+  &.v75 {
+    height: 75vh;
+  }
+  &.v100 {
+    height: 100vh;
+  }
 
   &__logo-box {
     position: absolute;
@@ -183,7 +194,7 @@
   margin: 5px auto;
 }
 
-.button {
+.navbutton {
   cursor: pointer;
   display: inline-block;
   width: auto;
@@ -230,7 +241,7 @@
   transition: all 0.7s ease;
 }
 
-.button.active .top {
+.navbutton.active .top {
   -webkit-transform: translateY(7px) rotateZ(45deg);
   -moz-transform: translateY(7px) rotateZ(45deg);
   -ms-transform: translateY(7px) rotateZ(45deg);
@@ -238,7 +249,7 @@
   transform: translateY(7px) rotateZ(45deg);
 }
 
-.button.active .bottom {
+.navbutton.active .bottom {
   -webkit-transform: translateY(-9px) rotateZ(-45deg);
   -moz-transform: translateY(-9px) rotateZ(-45deg);
   -ms-transform: translateY(-9px) rotateZ(-45deg);
@@ -246,7 +257,7 @@
   transform: translateY(-9px) rotateZ(-45deg);
 }
 
-.button.active .middle {
+.navbutton.active .middle {
   width: 0;
 }
 
@@ -304,13 +315,34 @@ nav {
   -o-transition: all 0.7s 0.6s ease-in-out;
   transition: all 0.7s 0.6s ease-in-out;
 }
-
-.sidebar-item:last-child {
+.sidebar-item:nth-child(4) {
   -webkit-transition: all 0.7s 0.8s ease-in-out;
   -moz-transition: all 0.7s 0.8s ease-in-out;
   -ms-transition: all 0.7s 0.8s ease-in-out;
   -o-transition: all 0.7s 0.8s ease-in-out;
-  transition: all 0.7s 0.6s ease-in-out;
+  transition: all 0.7s 0.8s ease-in-out;
+}
+.sidebar-item:nth-child(5) {
+  -webkit-transition: all 0.7s 1s ease-in-out;
+  -moz-transition: all 0.7s 1s ease-in-out;
+  -ms-transition: all 0.7s 1s ease-in-out;
+  -o-transition: all 0.7s 1s ease-in-out;
+  transition: all 0.7s 1s ease-in-out;
+}
+.sidebar-item:nth-child(6) {
+  -webkit-transition: all 0.7s 1.2s ease-in-out;
+  -moz-transition: all 0.7s 1.2s ease-in-out;
+  -ms-transition: all 0.7s 1.2s ease-in-out;
+  -o-transition: all 0.7s 1.2s ease-in-out;
+  transition: all 0.7s 1.2s ease-in-out;
+}
+
+.sidebar-item:last-child {
+  -webkit-transition: all 0.7s 1.4s ease-in-out;
+  -moz-transition: all 0.7s 1.4s ease-in-out;
+  -ms-transition: all 0.7s 1.4s ease-in-out;
+  -o-transition: all 0.7s 1.4s ease-in-out;
+  transition: all 0.7s 1.4s ease-in-out;
 }
 
 .sidebar-item.active {
@@ -395,5 +427,38 @@ nav {
   }
   .visible-xs {
     display: none;
+  }
+}
+.down_arrow {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+  .arrow {
+    text-align: center;
+    margin: 8% 0;
+  }
+  .bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
   }
 }

@@ -31,8 +31,7 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/duq7wxv.css">
     <!--TYPEKIT INJECT-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/98edb62204.js" crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -43,7 +42,7 @@
 
 <body <?php body_class(); ?>>
     <div class="nav-right visible-xs">
-        <div class="button" id="btn">
+        <div class="navbutton" id="btn">
             <div class="bar top"></div>
             <div class="bar middle"></div>
             <div class="bar bottom"></div>
@@ -53,7 +52,7 @@
     <main>
         <nav>
             <div class="nav-right hidden-xs">
-                <div class="button" id="btn">
+                <div class="navbutton" id="btn">
                     <div class="bar top"></div>
                     <div class="bar middle"></div>
                     <div class="bar bottom"></div>
@@ -61,7 +60,7 @@
             </div>
             <!-- nav-right -->
         </nav>
-        <header class="header">
+        <header class="header <?php the_field('hero_section_size'); ?>">
 
 
             <?php get_template_part('template-parts/hero');?>

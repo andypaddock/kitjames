@@ -51,7 +51,11 @@ $heroPoster = get_field('video_poster');?>
             if ($mainBlocks == 'yes'): ?>
     <div class="main_links"><?php get_template_part('template-parts/main-boxes');?></div>
     <?php else:?>
-    <div class="down_arrow"></div>
+    <div class="down_arrow">
+        <div class="arrow bounce">
+            <a class="fal fa-long-arrow-down fa-4x" href="#content"></a>
+        </div>
+    </div>
     <?php endif; ?>
 </div>
 <?php endif;?>

@@ -13,6 +13,8 @@
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1;
+  padding: 0 8rem;
+  margin-bottom: 5rem;
 }
 .owl-carousel .owl-stage {
   position: relative;
@@ -78,6 +80,20 @@
   border: none;
   padding: 0 !important;
   font: inherit;
+  span {
+    font-size: 7rem;
+    color: $color-primary;
+  }
+}
+.owl-prev {
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+.owl-next {
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 .owl-carousel.owl-loaded {
   display: block;
