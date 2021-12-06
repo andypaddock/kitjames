@@ -1,27 +1,31 @@
 <section class="faq-block">
     <div class="row">
-        <div class="col w50 toggle-block">
+        <div class="col w50 toggle-block block <?php
+
+if(get_sub_field('display_settings'))
+{
+	echo 'one';
+}
+
+?>">
 
 
             <?php if( have_rows('faq_item') ): 
                      while ( have_rows('faq_item') ) : the_row(); ?>
 
-            <div class="item">
-
-                <label class="collapsed">
-
+            <div class="block__item">
+                <div class="block__title">
                     <h3 class="heading"><span
                             class="highlight-letter"><?php the_sub_field('letter'); ?></span><?php the_sub_field('title'); ?>
                     </h3>
-                    <span class="arrow"><span></span><span></span></span>
-                </label>
-                <div class="content mb2">
+                </div>
+                <div class="block__text">
                     <?php the_sub_field('description'); ?>
                 </div>
 
             </div>
 
-            <?php $count++; endwhile; endif; ?>
+            <?php endwhile; endif; ?>
 
 
         </div>

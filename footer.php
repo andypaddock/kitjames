@@ -17,19 +17,25 @@
     <?php $footerImage = get_field('footer_image','options'); ?>
 
     <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
-        <!-- <div class="footer__text-box">
+        <div class="footer__text-box">
             <h1 class="heading-secondary">
                 <span class="heading-secondary--main"><?php the_field('footer_header','options'); ?></span>
                 <span class="heading-secondary--sub"><?php the_field('footer_sub_header','options'); ?></span>
             </h1>
         </div>
-        <div class="header__quote-box">
+        <div class="footer__quote-box">
             <blockquote><?php the_field('quote'); ?></blockquote>
             <cite><?php the_field('cite'); ?></cite>
-        </div> -->
+        </div>
 
     </div>
     <?php endif;?>
+    <div class="footer-navbar">
+        <div class="row">
+            <div class="logo"><?php get_template_part("inc/img/initials"); ?></div>
+            <div class="nav"></div>
+        </div>
+    </div>
 
 </footer>
 </main>

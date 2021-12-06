@@ -49,6 +49,9 @@
       padding: 3rem 2rem;
       grid-gap: 3rem 2rem;
       background: $color-secondary-dark;
+      &.boxed {
+        background: none;
+      }
 
       &.visible {
         display: grid;

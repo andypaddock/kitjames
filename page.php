@@ -24,6 +24,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/testimonial_block');?>
 <?php elseif( get_row_layout() == 'testimonial_slider' ):?>
 <?php get_template_part('template-parts/testimonial');?>
+<?php elseif( get_row_layout() == 'boxedcontent' ):?>
+<?php get_template_part('template-parts/boxedcontent');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

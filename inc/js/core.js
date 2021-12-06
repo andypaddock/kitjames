@@ -1,6 +1,5 @@
 //@prepros-prepend mixitup.min.js
 //@prepros-prepend mixitup-pagination.js
-//@prepros-prepend jquery.magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
 //@prepros-prepend readmore.js
 
@@ -38,20 +37,24 @@ $(".tabbed-section__head--tab").click(function (e) {
 
 // ============ Carousels
  
-$(".owl-carousel").owlCarousel({
+$(".testimonial-carousel").owlCarousel({
   loop:true,
   margin:48,
   center:true,
   nav:true,
-  dots:true,
+  dots:false,
   items:1,
   autoplay:true,
     autoplayTimeout:6000,
     autoplayHoverPause:true,
-})
+});
+
 
 
 new Readmore('article');
+
+
+// SIDEBAR MOBILEMENU
 
 $(document).ready(function() {
 
@@ -73,10 +76,19 @@ $(document).ready(function() {
 
 });
 
-var mixer = mixitup('.testimonial-grid', {
-    controls: {
-        toggleLogic: 'and'
-    }
+
+
+// ACCORDIAN SINGLE ITEM ONLY
+
+$(document).ready(function() {
+  $('.block__title').click(function(event) {
+      if($('.block').hasClass('one')){
+          $('.block__title').not($(this)).removeClass('active');
+          $('.block__text').not($(this).next()).slideUp(300);
+      }
+      $(this).toggleClass('active').next().slideToggle(300);
+  });
+
 });
 
 

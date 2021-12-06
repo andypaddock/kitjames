@@ -276,26 +276,26 @@ add_theme_support( 'post-thumbnails' );
 // 	endforeach;
 // }
 
-add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3 );
-function wsds_defer_scripts( $tag, $handle, $src ) {
+// add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3 );
+// function wsds_defer_scripts( $tag, $handle, $src ) {
 
-	// The handles of the enqueued scripts we want to defer
-	$defer_scripts = array( 
-    'contact-form-7',
-    'plyr-js',
-    'kitjames-core-js',
-    'anime-js',
-    'lodash-js',
-    'google-recaptcha',
-    'wpcf7-recaptcha',
-	);
+// 	// The handles of the enqueued scripts we want to defer
+// 	$defer_scripts = array( 
+//     'contact-form-7',
+//     'plyr-js',
+//     'kitjames-core-js',
+//     'anime-js',
+//     'lodash-js',
+//     'google-recaptcha',
+//     'wpcf7-recaptcha',
+// 	);
 
-    if ( in_array( $handle, $defer_scripts ) ) {
-        return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
-    }
+//     if ( in_array( $handle, $defer_scripts ) ) {
+//         return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
+//     }
     
-    return $tag;
-} 
+//     return $tag;
+// } 
 
 function add_menu_link_class( $atts, $item, $args ) {
     if (property_exists($args, 'link_class')) {
