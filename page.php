@@ -26,6 +26,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/testimonial');?>
 <?php elseif( get_row_layout() == 'boxedcontent' ):?>
 <?php get_template_part('template-parts/boxedcontent');?>
+<?php elseif( get_row_layout() == 'contact_links' ):?>
+<?php get_template_part('template-parts/links');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

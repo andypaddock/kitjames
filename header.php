@@ -50,7 +50,18 @@
     </div>
 
     <main>
+        <menu>
+            <?wp_nav_menu( array( 
+                        'theme_location' => 'main-menu',
+                        'container_class' => 'header-menu'
+                        // 'menu_class' => 'header-menu',
+    //                     'list_item_class'  => 'sidebar-item',
+    // 'link_class'   => 'sidebar-anchor'
+                    ) ); ?>
+        </menu>
         <nav>
+            <!-- nav-right -->
+
             <div class="nav-right hidden-xs">
                 <div class="navbutton" id="btn">
                     <div class="bar top"></div>
@@ -58,7 +69,8 @@
                     <div class="bar bottom"></div>
                 </div>
             </div>
-            <!-- nav-right -->
+
+
         </nav>
         <header class="header <?php the_field('hero_section_size'); ?>">
 
