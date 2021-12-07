@@ -1,6 +1,6 @@
 <section class="testimonial-block" id="testimonial-section">
 
-    <div class="row">
+    <div class="row w80">
         <div class="controls">
             <ul>
                 <?php $all_categories = get_terms( array(
@@ -58,23 +58,28 @@ $counter++;
                         <?php $testVideo = get_field('video_file'); ?>
                         <div class="popup__full">
                             <a href="#testimonial-section" class="popup__close">&times;</a>
-                            <video playsinline controls autoplay muted loop poster="<?php echo $heroPoster['url'];?>"
-                                id="bgvideo">
+                            <video playsinline controls id="bgvideo">
                                 <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
                             </video>
                         </div>
                         <?php else:?>
                         <div class="popup__left">
-                            <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                            <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                            <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
+                            <blockquote>
+                                <?php the_field('text_content');?>
+                            </blockquote>
+                            <p class="quote-cite"><?php the_field('cite');?></p>
                         </div>
                         <div class="popup__right">
                             <a href="#testimonial-section" class="popup__close">&times;</a>
-                            <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
-                            <p class="popup__text">
-                                <?php the_field('text_content');?>
-                            </p>
-                            <a href="#" class="btn btn--green">Contact</a>
+                            <?php $testVideo = get_field('video_file'); ?>
+                            <?php if ($testVideo):?>
+                            <video playsinline controls id="bgvideo">
+                                <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
+                            </video>
+                            <?php else:?>
+                            <?php the_field('embed_video'); ?>
+                            <?php endif;?>
                         </div>
                         <?php endif;?>
                     </div>

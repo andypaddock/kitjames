@@ -1,5 +1,5 @@
 <section class="testimonial-slider">
-    <div class="row">
+    <div class="row w60">
         <div class="owl-carousel owl-theme testimonial-carousel">
             <?php
 $loop = new WP_Query(

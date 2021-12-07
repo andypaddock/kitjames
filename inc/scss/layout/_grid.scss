@@ -11,7 +11,6 @@
   // }
 
   @include respond(tab-port) {
-    max-width: 50rem;
     padding: 0 3rem;
   }
 
@@ -66,26 +65,30 @@
 }
 section {
   padding: 5rem 0;
-  background: $color-primary-bg;
+  // background: $color-primary-bg;
 }
 
-// @include respond(tab-land) {
-//   section {
-//     .w40 {
-//       width: 40%;
-//       margin: 0 auto;
-//     }
-//     .w50 {
-//       width: 50%;
-//       margin: 0 auto;
-//     }
-//     .w60 {
-//       width: 60%;
-//       margin: 0 auto;
-//     }
-//     .w80 {
-//       width: 80%;
-//       margin: 0 auto;
-//     }
-//   }
-// }
+@media (min-width: 56.25rem) {
+  section {
+    .w40 {
+      width: calc(#{$grid-width} * 0.4);
+      margin: 0 auto;
+    }
+    .w50 {
+      width: calc(#{$grid-width} * 0.5);
+      margin: 0 auto;
+    }
+    .w60 {
+      width: calc(#{$grid-width} * 0.6);
+      margin: 0 auto;
+    }
+    .w70 {
+      width: calc(#{$grid-width} * 0.7);
+      margin: 0 auto;
+    }
+    .w80 {
+      width: calc(#{$grid-width} * 0.8);
+      margin: 0 auto;
+    }
+  }
+}

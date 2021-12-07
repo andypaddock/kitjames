@@ -1,6 +1,6 @@
 <section class="faq-block">
-    <div class="row">
-        <div class="col w50 toggle-block block <?php
+    <div class="row w60">
+        <div class="col  toggle-block block <?php
 
 if(get_sub_field('display_settings'))
 {

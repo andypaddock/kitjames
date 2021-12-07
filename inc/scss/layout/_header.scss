@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: hidden;
   }
   video#bgvideo {
     position: absolute;
@@ -162,6 +163,10 @@
   position: fixed;
   right: 3rem;
   top: 2rem;
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
 }
 
 .nav-right.visible-xs {
@@ -177,35 +182,19 @@
 }
 
 .bar {
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -ms-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
 .nav-right.visible-xs .active .bar {
   background-color: #fff;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -ms-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
 .navbutton.active .top {
-  -webkit-transform: translateY(7px) rotateZ(45deg);
-  -moz-transform: translateY(7px) rotateZ(45deg);
-  -ms-transform: translateY(7px) rotateZ(45deg);
-  -o-transform: translateY(7px) rotateZ(45deg);
   transform: translateY(7px) rotateZ(45deg);
 }
 
 .navbutton.active .bottom {
-  -webkit-transform: translateY(-9px) rotateZ(-45deg);
-  -moz-transform: translateY(-9px) rotateZ(-45deg);
-  -ms-transform: translateY(-9px) rotateZ(-45deg);
-  -o-transform: translateY(-9px) rotateZ(-45deg);
   transform: translateY(-9px) rotateZ(-45deg);
 }
 
@@ -214,10 +203,6 @@
 }
 
 .move-to-left {
-  -webkit-transform: translateX(-400px);
-  -moz-transform: translateX(-400px);
-  -ms-transform: translateX(-400px);
-  -o-transform: translateX(-400px);
   transform: translateX(-400px);
 }
 
@@ -326,9 +311,9 @@ nav {
   .nav-right {
     position: absolute;
   }
-  .hidden-xs {
-    display: block;
-  }
+  // .hidden-xs {
+  //   display: block;
+  // }
   .visible-xs {
     display: none;
   }
@@ -370,11 +355,12 @@ menu {
   position: sticky;
   top: 0;
   z-index: 3;
+  background-color: #040b2e;
 
   .header-menu {
     padding: 0;
     list-style: none;
-    background-color: #040b2e;
+
     text-align: center;
 
     ul {
@@ -399,17 +385,20 @@ menu {
           transition: ease-out 0.25s;
           text-transform: uppercase;
         }
+        &:hover,
+        &.current-menu-item {
+          border-bottom: 3px solid $color-primary;
+          &.menu-logo {
+            border-bottom: 1px solid $color-white;
+          }
+        }
       }
     }
   }
-  li a:hover,
-  .current-menu-item {
-    border-bottom: 3px solid $color-primary;
-    &.menu-logo {
-      border-bottom: 1px solid $color-white;
-    }
+  @include respond(tab-port) {
+    display: none;
   }
 }
-.scrolled .header-menu {
+.scrolled menu {
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.4);
 }

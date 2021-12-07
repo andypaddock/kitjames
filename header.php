@@ -53,7 +53,7 @@
         <menu>
             <?wp_nav_menu( array( 
                         'theme_location' => 'main-menu',
-                        'container_class' => 'header-menu'
+                        'container_class' => 'header-menu row'
                         // 'menu_class' => 'header-menu',
     //                     'list_item_class'  => 'sidebar-item',
     // 'link_class'   => 'sidebar-anchor'

@@ -76,6 +76,12 @@ $(document).ready(function() {
 
 });
 
+var mixer = mixitup('.testimonial-grid', {
+  controls: {
+      toggleLogic: 'and'
+  }
+});
+
 
 
 // ACCORDIAN SINGLE ITEM ONLY
