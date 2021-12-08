@@ -298,10 +298,15 @@
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
 }
+article {
+  p {
+    text-align: center;
+  }
+}
 .read-more,
 .read-less {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 5rem;
   a {
     color: $color-primary;
     text-decoration: none;

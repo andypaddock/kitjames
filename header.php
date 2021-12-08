@@ -26,16 +26,8 @@
     <meta name="description" content="<?php echo $excerpt; ?>">
     <meta name="keywords" content=" ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title><?php echo the_title(); ?></title>
-
-    <link rel="stylesheet" href="https://use.typekit.net/duq7wxv.css">
-    <!--TYPEKIT INJECT-->
-    <script src="https://kit.fontawesome.com/98edb62204.js" crossorigin="anonymous"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
-
-
+    <script src="https://kit.fontawesome.com/98edb62204.js" crossorigin="anonymous" defer="defer"></script>
     <?php wp_head(); ?>
 
 </head>
