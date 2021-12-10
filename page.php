@@ -26,12 +26,16 @@ get_header(); ?>
 <?php get_template_part('template-parts/testimonial_block');?>
 <?php elseif( get_row_layout() == 'testimonial_slider' ):?>
 <?php get_template_part('template-parts/testimonial');?>
+<?php elseif( get_row_layout() == 'single_testimonial' ):?>
+<?php get_template_part('template-parts/singletestimonial');?>
 <?php elseif( get_row_layout() == 'boxedcontent' ):?>
 <?php get_template_part('template-parts/boxedcontent');?>
 <?php elseif( get_row_layout() == 'contact_links' ):?>
 <?php get_template_part('template-parts/links');?>
 <?php elseif( get_row_layout() == 'shortcode' ):?>
 <?php get_template_part('template-parts/shortcode');?>
+<?php elseif( get_row_layout() == 'blog_posts' ):?>
+<?php get_template_part('template-parts/post_block');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

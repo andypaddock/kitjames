@@ -8,7 +8,7 @@
                 <div class="feature-box">
                     <?php get_template_part("inc/img/exec"); ?>
                     <h3 class="heading-tertiary light"><?php the_field('link_one_title','options'); ?></h3>
-                    <?php the_sub_field('sub_title_one','options'); ?>
+                    <?php the_field('sub_title_one','options'); ?>
                     <div class="arrow">
                         <?php get_template_part("inc/img/down"); ?>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="feature-box">
                     <?php get_template_part("inc/img/single"); ?>
                     <h3 class="heading-tertiary light"><?php the_field('link_two_title','options'); ?></h3>
-                    <?php the_sub_field('sub_title_two','options'); ?>
+                    <?php the_field('sub_title_two','options'); ?>
                     <div class="arrow">
                         <?php get_template_part("inc/img/down"); ?>
                     </div>
@@ -37,7 +37,7 @@
                     <?php get_template_part("inc/img/small"); ?>
                     <h3 class="heading-tertiary light"><?php the_field('link_three_title','options'); ?>
                     </h3>
-                    <?php the_sub_field('sub_title_three','options'); ?>
+                    <?php the_field('sub_title_three','options'); ?>
                     <div class="arrow">
                         <?php get_template_part("inc/img/down"); ?>
                     </div>

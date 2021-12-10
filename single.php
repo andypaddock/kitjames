@@ -8,11 +8,11 @@ get_header(); ?>
 
 
 
+<section class="post-content">
+    <div class="row w60">
+        <div class="flex-container">
 
-<div class="row">
-    <div class="flex-container">
-
-        <?php
+            <?php
  
 if ( have_posts() ) : 
     while ( have_posts() ) : the_post();
@@ -25,7 +25,7 @@ if ( have_posts() ) :
 
         ?>
 
+        </div>
     </div>
-</div>
-
+</section>
 <?php get_footer(); ?>

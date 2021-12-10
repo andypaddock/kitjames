@@ -17,7 +17,7 @@
                 <div class="line"></div>
                 <div></div>
             </div>
-            <div class="row">
+            <div class="row w40">
                 <div class="footer_text">
                     <h1 class="heading-secondary">
                         <span class="heading-secondary"><?php the_field('footer_main_text'); ?></span>

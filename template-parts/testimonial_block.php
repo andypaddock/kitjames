@@ -18,7 +18,7 @@
 
 
 
-        <div class="testimonial-grid">
+        <div class="testimonial-grid filter-grid">
             <?php
 $loop = new WP_Query(
     array(

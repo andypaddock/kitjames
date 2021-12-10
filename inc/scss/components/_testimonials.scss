@@ -114,3 +114,49 @@
     }
   }
 }
+.single-testimonial {
+  .centre-line {
+    display: flex;
+    div {
+      flex: 1;
+    }
+  }
+  .line {
+    border-right: 1px solid $color-white;
+    height: 2rem;
+    margin: 2rem 0;
+  }
+  .internal-video {
+    text-align: center;
+    position: relative;
+    video {
+      width: 100%;
+    }
+    span {
+      @include absCenter;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      width: 100%;
+      &.in-viewport {
+        animation: quote-fade 3s 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+      }
+    }
+  }
+  .quote {
+    text-align: center;
+    .copy {
+      color: $color-primary;
+      font-size: 2.5rem;
+    }
+    .quote-cite {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+}

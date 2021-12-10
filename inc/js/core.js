@@ -76,11 +76,8 @@ $(document).ready(function() {
 
 });
 
-var mixer = mixitup('.testimonial-grid', {
-  controls: {
-      toggleLogic: 'and'
-  }
-});
+var mixer = mixitup('.filter-grid');
+
 
 
 
@@ -100,10 +97,9 @@ $(document).ready(function() {
 
 
 
+
+
 }); //Don't remove ---- end of jQuery wrapper
-
-
-
 
 
 

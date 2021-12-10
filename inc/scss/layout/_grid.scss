@@ -69,7 +69,8 @@ section {
 }
 
 @media (min-width: 56.25rem) {
-  section {
+  section,
+  footer {
     .w40 {
       width: calc(#{$grid-width} * 0.4);
       margin: 0 auto;
