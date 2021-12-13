@@ -28,6 +28,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo the_title(); ?></title>
     <script src="https://kit.fontawesome.com/98edb62204.js" crossorigin="anonymous" defer="defer"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
     <?php wp_head(); ?>
 
 </head>

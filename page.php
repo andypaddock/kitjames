@@ -36,6 +36,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/shortcode');?>
 <?php elseif( get_row_layout() == 'blog_posts' ):?>
 <?php get_template_part('template-parts/post_block');?>
+<?php elseif( get_row_layout() == 'map_locations' ):?>
+<?php get_template_part('template-parts/mappins');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>
