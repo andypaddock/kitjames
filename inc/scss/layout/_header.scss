@@ -43,8 +43,20 @@
     );
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     overflow: hidden;
+    .heading-secondary {
+      color: $color-white;
+      font-size: 5.5rem;
+    }
+    .section-links {
+      .heading-tertiary {
+        color: $color-white;
+      }
+    }
+    cite {
+      font-size: 2.5rem;
+    }
   }
   video#bgvideo {
     position: absolute;
