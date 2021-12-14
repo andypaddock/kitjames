@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 });
 
-var mixer = mixitup('.filter-grid');
+
 
 
 
@@ -95,6 +95,62 @@ $(document).ready(function() {
 });
 
 
+// // First we select the element we want to target
+// const target = document.querySelector('.onview');
+
+// // Next we want to create a function that will be called when that element is intersected
+// function handleIntersection(entries) {
+//   // The callback will return an array of entries, even if you are only observing a single item
+//   entries.map((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('visible')
+//     } else {
+//       entry.target.classList.remove('visible')
+//     }
+//   });
+// }
+
+// // Next we instantiate the observer with the function we created above. This takes an optional configuration
+// // object that we will use in the other examples.
+// const observer = new IntersectionObserver(handleIntersection);
+
+// // Finally start observing the target element
+// observer.observe(target);
+
+
+
+const sections = document.querySelectorAll('.onview');
+
+// Using Intersection Observer ↓
+
+const observerConfig = {
+  root: null,
+  rootMargin: '600px 0px 0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, observerConfig);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+var containerEl = document.querySelector('.filter-grid');
+var mixer;
+
+if (containerEl) {
+    mixer = mixitup(containerEl, {
+         
+    });
+}
 
 
 
@@ -103,24 +159,5 @@ $(document).ready(function() {
 
 
 
-// First we select the element we want to target
-const target = document.querySelector('.onview');
 
-// Next we want to create a function that will be called when that element is intersected
-function handleIntersection(entries) {
-  // The callback will return an array of entries, even if you are only observing a single item
-  entries.map((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible')
-    } else {
-      entry.target.classList.remove('visible')
-    }
-  });
-}
-
-// Next we instantiate the observer with the function we created above. This takes an optional configuration
-// object that we will use in the other examples.
-const observer = new IntersectionObserver(handleIntersection);
-
-// Finally start observing the target element
-observer.observe(target);
+// var mixer = mixitup('.filter-grid');

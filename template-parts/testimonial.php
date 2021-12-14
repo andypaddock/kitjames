@@ -42,12 +42,3 @@ if( $link ):
         <?php endif; ?>
     </div>
 </section>
-<script>
-// TESTIMONIAL GRID FILTER
-
-var mixer = mixitup('.testimonial-grid', {
-    controls: {
-        toggleLogic: 'and'
-    }
-});
-</script>
