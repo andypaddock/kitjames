@@ -48,6 +48,7 @@
     </div>
 
     <main>
+        <div class="logo-mobile"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>
         <menu>
             <?wp_nav_menu( array( 
                         'theme_location' => 'main-menu',
@@ -70,6 +71,7 @@
 
 
         </nav>
+
         <header class="header <?php the_field('hero_section_size'); ?>">
 
             <?php if (is_single()):?>

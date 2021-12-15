@@ -113,10 +113,10 @@
       }
     }
     ul {
-      list-style: none;
+      padding-left: 1rem;
       li {
-        padding: 0.5rem 0;
-        &::before {
+        padding: 0.5rem 1rem;
+        &::marker {
           content: "\2022";
           color: $color-primary;
           font-weight: bold;

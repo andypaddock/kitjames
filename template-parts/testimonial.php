@@ -18,10 +18,10 @@ $mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
             <div class="quote">
                 <?php get_template_part("inc/img/quote"); ?>
                 <p class="copy"><?php the_field('text_content');?></p>
-                <div class="centre-line">
+                <!-- <div class="centre-line">
                     <div class="line"></div>
                     <div></div>
-                </div>
+                </div> -->
                 <p class="quote-cite"><?php the_title(); ?></p>
 
             </div>

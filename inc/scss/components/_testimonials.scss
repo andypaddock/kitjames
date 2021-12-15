@@ -29,6 +29,8 @@
     font-size: 1.7rem;
     font-weight: 700;
     margin: 5rem 0;
+    display: unset;
+    background: none;
     &:hover {
       &:after {
         content: "→";
@@ -151,6 +153,8 @@
     .copy {
       color: $color-primary;
       font-size: 2.5rem;
+      line-height: 3.5rem;
+      margin-bottom: 1.5rem;
     }
     .quote-cite {
       font-weight: 700;

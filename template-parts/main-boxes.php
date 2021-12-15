@@ -1,4 +1,4 @@
-<section class="section-links">
+<div class="section-links">
     <div class="row w70">
         <?php $actual_link = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>
         <div class="col-1-of-3">
@@ -33,4 +33,4 @@
             </a>
         </div>
     </div>
-</section>
+</div>

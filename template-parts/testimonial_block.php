@@ -54,6 +54,18 @@ $counter++;
                                 <?php the_field('embed_video'); ?></div>
                         </div>
 
+
+                        <?php elseif ($contentType == 'text') :?>
+                        <div class="popup__full">
+                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
+                            <blockquote>
+                                <?php the_field('text_content');?>
+                            </blockquote>
+                            <p class="quote-cite"><?php the_field('cite');?></p>
+                        </div>
+
+
                         <?php elseif ($contentType == 'video') :?>
                         <?php $testVideo = get_field('video_file'); ?>
                         <div class="popup__full">

@@ -66,9 +66,13 @@
 section {
   padding: 5rem 0;
   // background: $color-primary-bg;
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
 
 @media (min-width: 56.25rem) {
+  div,
   section,
   footer {
     .w40 {

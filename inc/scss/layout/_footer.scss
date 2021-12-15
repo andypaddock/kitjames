@@ -102,7 +102,7 @@
     .footer_link {
       border: 1px solid $color-white;
       border-radius: 0.5rem;
-      padding: 2rem 4rem 2rem 5rem;
+      padding: 1.5rem 3rem;
       margin-bottom: 2rem;
       .footer_button {
         display: block;
@@ -110,24 +110,25 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.7rem;
-        font-weight: 700;
-        &:hover {
-          &:after {
-            content: "→";
-            transition: all ease 0.5s;
-            opacity: 1;
-            left: 8px;
-          }
-        }
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+        // &:hover {
+        //   &:after {
+        //     content: "→";
+        //     transition: all ease 0.5s;
+        //     opacity: 1;
+        //     left: 8px;
+        //   }
+        // }
 
-        &:after {
-          content: "→";
-          transition: all ease 0.5s;
-          position: relative;
-          opacity: 0;
-          left: -12px;
-        }
+        // &:after {
+        //   content: "→";
+        //   transition: all ease 0.5s;
+        //   position: relative;
+        //   opacity: 1;
+        //   left: 1.6rem;
+        // }
       }
       a {
         color: $color-white;
@@ -136,6 +137,9 @@
         font-weight: 400;
         font-size: 2.1rem;
         position: relative;
+      }
+      .link-arrow {
+        margin-left: 5rem;
       }
     }
   }
@@ -156,6 +160,7 @@
           text-transform: uppercase;
           text-decoration: none;
           padding: 2rem;
+          font-size: 1.4rem;
         }
       }
     }
