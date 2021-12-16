@@ -24,7 +24,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 1rem;
-      font-family: 5rem;
+      font-size: 5rem;
     }
     /*
         animation-delay: 3s;
@@ -92,6 +92,9 @@ ul {
 blockquote {
   font-family: "Cormorant Garamond", serif;
   font-size: 5rem;
+  @include respond(phone) {
+    font-size: 3rem;
+  }
 }
 .button {
   display: block;

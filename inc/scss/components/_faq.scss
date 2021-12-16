@@ -115,5 +115,11 @@
   padding: 1rem 3.5rem;
   &.alt-color {
     padding-left: 9.5rem;
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
+  }
+  @include respond(phone) {
+    padding: 1rem 0;
   }
 }
