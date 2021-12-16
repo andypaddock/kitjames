@@ -12,6 +12,9 @@
       background: $color-secondary-dark;
       cursor: pointer;
       border-radius: 0.5rem;
+      h3 i {
+        padding-right: 2rem;
+      }
 
       &:before {
         @include psuedoElement;

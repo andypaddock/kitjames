@@ -7,7 +7,7 @@
                 
             while( have_rows('tabs') ): the_row();?>
                     <div class="tabbed-section__head--tab" data-tab="tab-number<?php echo get_row_index(); ?>">
-                        <h3 class="heading heading__5"><?php the_sub_field('title');?></h3>
+                        <h3><?php the_sub_field('icon');?><?php the_sub_field('title');?></h3>
                     </div>
                     <?php endwhile; endif;?>
                 </div>
