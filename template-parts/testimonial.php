@@ -30,6 +30,8 @@ $mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
 wp_reset_postdata();
 ?>
         </div>
+        <?php $moreButton = get_sub_field('hide_button');
+        if($moreButton == false):?>
         <?php 
 $link = get_field('testimonial_link', 'options');
 if( $link ): 
@@ -41,4 +43,5 @@ if( $link ):
             target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
     </div>
+    <?php endif; ?>
 </section>

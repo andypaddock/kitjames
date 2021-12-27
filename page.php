@@ -38,6 +38,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/post_block');?>
 <?php elseif( get_row_layout() == 'map_locations' ):?>
 <?php get_template_part('template-parts/mappins');?>
+<?php elseif( get_row_layout() == 'single_button' ):?>
+<?php get_template_part('template-parts/singlebutton');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

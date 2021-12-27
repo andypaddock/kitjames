@@ -1,6 +1,7 @@
 <section class="testimonial-block" id="testimonial-section">
 
     <div class="row w80">
+        <?php if(get_sub_field('show_filters')):?>
         <div class="controls">
             <ul>
                 <?php $all_categories = get_terms( array(
@@ -15,7 +16,7 @@
                 <?php endforeach; ?>
             </ul>
         </div>
-
+        <?php endif; ?>
 
 
         <div class="testimonial-grid filter-grid">
