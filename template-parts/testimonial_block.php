@@ -19,7 +19,7 @@
         <?php endif; ?>
 
 
-        <div class="testimonial-grid filter-grid">
+        <div class="testimonial-grid filter-grid <?php the_sub_field('columns');?>">
             <?php
 $loop = new WP_Query(
     array(

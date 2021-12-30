@@ -10,6 +10,9 @@
   text-transform: uppercase;
   svg {
     height: 3rem;
+    @include respond(phone) {
+      display: none;
+    }
   }
   .heading-tertiary {
     font-size: 1.6rem;

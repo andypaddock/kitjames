@@ -71,12 +71,6 @@
     }
   }
   .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    @include respond(tab-port) {
-      grid-template-columns: 1fr;
-    }
     .mix {
       .test-image {
         border: 1px solid $color-primary;

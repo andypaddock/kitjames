@@ -91,7 +91,7 @@ ul {
 }
 blockquote {
   font-family: "Cormorant Garamond", serif;
-  font-size: 5rem;
+  font-size: 4rem;
   @include respond(phone) {
     font-size: 3rem;
   }
