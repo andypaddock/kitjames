@@ -39,7 +39,7 @@ $counter++;
                 <a class="pop-link" href="#popup<?php echo ($counter); ?>">
                     <div class="test-image" style="background-image: url(<?php echo $mainImage; ?>)">
 
-                        <?php get_template_part("inc/img/play"); ?>
+                        <?php get_template_part("inc/img/quote"); ?>
 
                     </div>
                 </a>
@@ -50,7 +50,7 @@ $counter++;
                         <?php $contentType = get_field('testimonial_type');
                         if ($contentType == 'external'): ?>
                         <div class="popup__full">
-                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <a href="#testimonial-section" target="_self" class="popup__close">&times;</a>
                             <div class="embed-container">
                                 <?php the_field('embed_video'); ?></div>
                         </div>
@@ -58,7 +58,7 @@ $counter++;
 
                         <?php elseif ($contentType == 'text') :?>
                         <div class="popup__full">
-                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <a href="#testimonial-section" target="_self" class="popup__close">&times;</a>
                             <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
                             <blockquote>
                                 <?php the_field('text_content');?>
@@ -70,7 +70,7 @@ $counter++;
                         <?php elseif ($contentType == 'video') :?>
                         <?php $testVideo = get_field('video_file'); ?>
                         <div class="popup__full">
-                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <a href="#testimonial-section" target="_self" class="popup__close">&times;</a>
                             <video playsinline controls id="bgvideo">
                                 <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
                             </video>
@@ -84,7 +84,7 @@ $counter++;
                             <p class="quote-cite"><?php the_field('cite');?></p>
                         </div>
                         <div class="popup__right">
-                            <a href="#testimonial-section" class="popup__close">&times;</a>
+                            <a href="#testimonial-section" target="_self" class="popup__close">&times;</a>
                             <?php $testVideo = get_field('video_file'); ?>
                             <?php if ($testVideo):?>
                             <video playsinline controls id="bgvideo">

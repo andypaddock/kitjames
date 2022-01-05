@@ -13,6 +13,13 @@
       margin: 2rem 0;
     }
   }
+  .copy {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
   .quote-cite {
     color: $color-primary;
     text-transform: uppercase;
@@ -82,6 +89,9 @@
       }
       svg {
         position: absolute;
+        path {
+          fill: $color-white;
+        }
       }
       .heading-highlight {
         padding: 2rem 0;
@@ -130,7 +140,7 @@
     }
     span {
       @include absCenter;
-      font-size: 3rem;
+      font-size: 2rem;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.3rem;
@@ -139,6 +149,10 @@
         animation: quote-fade 3s 1;
         animation-fill-mode: forwards;
         animation-delay: 4s;
+      }
+      cite {
+        display: block;
+        color: $color-primary;
       }
     }
   }

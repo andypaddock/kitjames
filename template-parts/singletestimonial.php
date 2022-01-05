@@ -12,7 +12,8 @@
             <video playsinline controls id="singletestvid" poster="<?php echo $singlePoster['url'];?>">
                 <source src="<?php echo $singleVideo['url'];?>" type="video/mp4">
             </video>
-            <span class="overlay-text onview"><?php the_sub_field('video_overlay_text');?></span>
+            <span
+                class="overlay-text onview"><?php the_sub_field('video_overlay_text');?><cite><?php the_sub_field('cite');?></cite></span>
         </div>
         <?php elseif ($singleType == 'quote') :?>
 

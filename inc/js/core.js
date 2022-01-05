@@ -139,8 +139,13 @@ if (containerEl) {
     });
 }
 
-
-
+// $(".popup__close").click(function() {
+//   $("#bgvideo")[0].pause();
+//   return false;                   
+// });
+$(".popup__close").on("click",function(){
+  $("#bgvideo").get(0).pause(); // $("#bone").trigger('pause');
+});
 
 }); //Don't remove ---- end of jQuery wrapper
 

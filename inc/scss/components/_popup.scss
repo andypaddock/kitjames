@@ -25,11 +25,13 @@
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border: 1px solid $color-primary;
     border-radius: 3px;
-    display: table;
-    overflow: hidden;
+    display: flex;
+    // overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
+    max-height: 75vh;
+    overflow: scroll;
   }
 
   &__left {
