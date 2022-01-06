@@ -139,12 +139,9 @@ if (containerEl) {
     });
 }
 
-// $(".popup__close").click(function() {
-//   $("#bgvideo")[0].pause();
-//   return false;                   
-// });
-$(".popup__close").on("click",function(){
-  $("#bgvideo").get(0).pause(); // $("#bone").trigger('pause');
+$(".popup__close").click(function(){
+  var id = $(this).attr('id');
+  $('.' + id)[0].pause();
 });
 
 }); //Don't remove ---- end of jQuery wrapper
