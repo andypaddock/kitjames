@@ -408,17 +408,41 @@ menu {
           text-decoration: none;
           color: #fff;
           display: block;
-          border-bottom: 3px solid rgba(255, 255, 255, 0);
+          // border-bottom: 3px solid rgba(255, 255, 255, 0);
           transition: ease-out 0.25s;
           text-transform: uppercase;
           font-size: 1.5rem;
           letter-spacing: 0.15rem;
+          &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: $color-primary;
+            width: 0;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover::after {
+            width: 100%;
+          }
         }
-        &:hover,
-        &.current-menu-item {
-          border-bottom: 3px solid $color-primary;
+        &.current-menu-item a {
+          // border-bottom: 3px solid $color-primary;
+          &:after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: $color-primary;
+            width: 100%;
+          }
           &.menu-logo {
-            border-bottom: 1px solid $color-white;
+            &::after {
+              content: none;
+            }
+            a {
+              &:hover {
+                content: none;
+              }
+            }
           }
         }
       }

@@ -25,3 +25,20 @@
 .count2 {
   column-count: 2;
 }
+.bordered-section {
+  border: 1px solid $color-primary;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  ol,
+  ul {
+    margin: 2rem;
+    font-size: 1.4rem;
+    li {
+      padding: 0.5rem;
+      &::marker {
+        color: $color-primary;
+        font-weight: 700;
+      }
+    }
+  }
+}
