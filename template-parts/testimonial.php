@@ -1,34 +1,23 @@
 <section class="testimonial-slider">
     <div class="row w60">
         <div class="owl-carousel owl-theme testimonial-carousel">
-            <?php
-$loop = new WP_Query(
-    array(
-        'post_type' => 'testimonial', // This is the name of your post type - change this as required,
-        'posts_per_page' => -1,
-        'meta_key' => 'testimonial_type',
-        'meta_value' => 'text'
-    )
-);
-while ( $loop->have_posts() ) : $loop->the_post();
-$mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
-// The content you want to loop goes in here:
-?>
+
+            <?php if( have_rows('short_testimonial','options') ): ?>
+            <?php while( have_rows('short_testimonial','options') ): the_row(); ?>
 
             <div class="quote">
                 <?php get_template_part("inc/img/quote"); ?>
-                <div class="copy"><?php the_field('text_content');?></div>
+                <div class="copy"><?php the_sub_field('testimonial');?></div>
                 <!-- <div class="centre-line">
                     <div class="line"></div>
                     <div></div>
                 </div> -->
-                <p class="quote-cite"><?php the_title(); ?></p>
+                <p class="quote-cite"><?php the_sub_field('name');?></p>
 
             </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
 
-            <?php endwhile;
-wp_reset_postdata();
-?>
         </div>
         <?php $moreButton = get_sub_field('hide_button');
         if($moreButton == false):?>

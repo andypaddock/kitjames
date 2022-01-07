@@ -38,17 +38,21 @@ $counter++;
             <div class="mix quote <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
                 <a class="pop-link" href="#popup<?php echo ($counter); ?>">
                     <div class="test-image" style="background-image: url(<?php echo $mainImage; ?>)">
-
-                        <?php get_template_part("inc/img/quote"); ?>
-
+                        <?php $contentType = get_field('testimonial_type');?>
+                        <!-- <?php get_template_part("inc/img/quote"); ?> -->
+                        <?php if ($contentType == 'video'): ?>
+                        <i class="fas fa-play-circle"></i>
+                        <?php else:?>
+                        <i class="fas fa-comment-alt-lines"></i>
+                        <?php endif;?>
                     </div>
                 </a>
                 <h2 class="heading-highlight"><?php the_title(); ?></h2>
+                <p class="quote-position"><?php the_field('cite');?></p>
                 <div class="popup" id="popup<?php echo ($counter); ?>">
                     <div class="popup__content">
 
-                        <?php $contentType = get_field('testimonial_type');
-                        if ($contentType == 'external'): ?>
+                        <?php if ($contentType == 'external'): ?>
                         <div class="popup__full">
                             <a href="#testimonial-section" id="popup<?php echo ($counter); ?>" target="_self"
                                 class="popup__close">&times;</a>
@@ -62,10 +66,11 @@ $counter++;
                             <a href="#testimonial-section" id="popup<?php echo ($counter); ?>" target="_self"
                                 class="popup__close">&times;</a>
                             <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
+                            <p class="quote-cite"><?php the_field('cite');?></p>
                             <blockquote>
                                 <?php the_field('text_content');?>
                             </blockquote>
-                            <p class="quote-cite"><?php the_field('cite');?></p>
+
                         </div>
 
 
@@ -81,10 +86,11 @@ $counter++;
                         <?php else:?>
                         <div class="popup__left">
                             <h2 class="heading-secondary u-margin-bottom-small"><?php the_title(); ?></h2>
+                            <p class="quote-cite"><?php the_field('cite');?></p>
                             <blockquote>
                                 <?php the_field('text_content');?>
                             </blockquote>
-                            <p class="quote-cite"><?php the_field('cite');?></p>
+
                         </div>
                         <div class="popup__right">
                             <a href="#testimonial-section" id="popup<?php echo ($counter); ?>" target="_self"

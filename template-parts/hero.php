@@ -6,7 +6,12 @@ $heroPoster = get_field('video_poster');?>
             if ($heroSwitch == 'video'): ?>
 
 
-<div class="hero">
+<div class="hero" style="background-image: linear-gradient(
+      0deg,
+      rgba(4, 11, 46, 1) 45%,
+      rgba(4, 11, 46, 0.5) 60%,
+      rgba(4, 11, 46, 0) 75%
+    )">
     <video playsinline autoplay muted loop poster="<?php echo $heroPoster['url'];?>" id="bgvideo">
         <?php if ($heroMobile): ?>
         <source src="<?php echo $heroMobile['url'];?>" type="video/mp4" media="all and (max-width: 480px)">

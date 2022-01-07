@@ -1,4 +1,5 @@
 .header {
+  min-height: 700px;
   &.v25 {
     height: 25vh;
   }
@@ -54,6 +55,7 @@
     }
     .heading-primary {
       line-height: 5rem;
+      // text-shadow: 2px 2px 5px rgb(0 0 0 / 40%), 0px 0px 2px rgb(0 0 0 / 40%);
     }
     .section-links {
       .heading-tertiary {
@@ -62,6 +64,9 @@
     }
     cite {
       font-size: 2.5rem;
+    }
+    blockquote {
+      // text-shadow: 2px 2px 5px rgb(0 0 0 / 40%), 0px 0px 2px rgb(0 0 0 / 40%);
     }
     .main_links {
       padding-top: 2vh;
@@ -92,6 +97,7 @@
     left: 2rem;
     top: 50%;
     transform: translateY(-50%);
+    // text-shadow: 2px 2px 5px rgb(0 0 0 / 40%), 0px 0px 2px rgb(0 0 0 / 40%);
     &:first-of-type {
       animation: quote-fade 3s 1;
       -webkit-animation: quote-fade 3s 1;
@@ -434,15 +440,11 @@ menu {
             background: $color-primary;
             width: 100%;
           }
-          &.menu-logo {
-            &::after {
-              content: none;
-            }
-            a {
-              &:hover {
-                content: none;
-              }
-            }
+        }
+        &.menu-logo.current-menu-item a,
+        &.menu-logo a {
+          &::after {
+            content: none;
           }
         }
       }

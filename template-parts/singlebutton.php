@@ -1,5 +1,5 @@
 <section class="section-singlebutton">
-    <div class="row w60">
+    <div class="row <?php the_sub_field('column_size'); ?>">
         <?php 
 $link = get_sub_field('single_link');
 if( $link ): 
@@ -10,8 +10,6 @@ if( $link ):
         <a class="button" href="<?php echo esc_url( $link_url ); ?>"
             target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
-        <!--***** END TOGGLE LIST *****-->
-        <?php endwhile; endif;?>
 
     </div>
 </section>
