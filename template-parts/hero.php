@@ -6,12 +6,7 @@ $heroPoster = get_field('video_poster');?>
             if ($heroSwitch == 'video'): ?>
 
 
-<div class="hero" style="background-image: linear-gradient(
-      0deg,
-      rgba(4, 11, 46, 1) 45%,
-      rgba(4, 11, 46, 0.5) 60%,
-      rgba(4, 11, 46, 0) 75%
-    )">
+<div class="hero">
     <video playsinline autoplay muted loop poster="<?php echo $heroPoster['url'];?>" id="bgvideo">
         <?php if ($heroMobile): ?>
         <source src="<?php echo $heroMobile['url'];?>" type="video/mp4" media="all and (max-width: 480px)">
@@ -28,6 +23,10 @@ $heroPoster = get_field('video_poster');?>
             if ($quoteSwitch == 'quote'): ?>
 
     <div class="header__quote-box">
+        <div class="row centre-line w40">
+            <div class="line"></div>
+            <div></div>
+        </div>
         <blockquote><?php the_field('quote'); ?></blockquote>
         <cite><?php the_field('cite'); ?></cite>
     </div>
