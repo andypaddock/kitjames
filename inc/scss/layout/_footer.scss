@@ -73,6 +73,23 @@
       float: none;
     }
   }
+  // .gradient-footer {
+  //   position: relative;
+  //   width: 100%;
+  //   &:after {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     content: "";
+  //     background-image: linear-gradient(
+  //       0deg,
+  //       rgba(4, 11, 46, 0.1) 0,
+  //       rgba(4, 11, 46, 0.1) 100%
+  //     );
+  //   }
+  // }
   .footer-hero {
     height: 35rem;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -149,6 +166,9 @@
   grid-template-columns: 1fr 3fr 2fr;
   .nav {
     padding: 3rem 0;
+    @include respond(phone) {
+      align-self: flex-start;
+    }
     ul {
       list-style: none;
       column-count: 3;
@@ -169,6 +189,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
     svg {
       height: 6rem;
       .cls-1 {
@@ -178,6 +199,9 @@
   }
   .privacy {
     padding: 3rem 0;
+    @include respond(phone) {
+      align-self: flex-start;
+    }
     ul {
       list-style: none;
       li {

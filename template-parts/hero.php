@@ -33,8 +33,35 @@ $heroPoster = get_field('video_poster');?>
     <?php elseif ($quoteSwitch == 'fade'):?>
 
     <div class="header__quote-box text-fade">
+        <div class="row centre-line w40">
+            <div class="line"></div>
+            <div></div>
+        </div>
         <blockquote><?php the_field('fade_text_initial'); ?></blockquote>
         <blockquote><?php the_field('fade_text_second'); ?></blockquote>
+    </div>
+    <?php elseif ($quoteSwitch == 'poem'):?>
+    <div class="poem-fade">
+        <div class="row centre-line w40">
+            <div class="line"></div>
+            <div></div>
+        </div>
+        <div class="fadeOut owl-carousel">
+
+            <?php if( have_rows('peom') ): ?>
+            <?php while( have_rows('peom') ): the_row(); ?>
+
+
+            <blockquote><?php the_sub_field('line'); ?></blockquote>
+
+            <?php endwhile; ?>
+
+
+            <?php endif; ?>
+
+
+        </div>
+        <cite><?php the_field('poem_cite'); ?></cite>
     </div>
     <?php endif; ?>
     <?php $mainBlocks = get_field('main_link_boxes');

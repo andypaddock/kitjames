@@ -36,10 +36,9 @@ $counter++;
             <?php $terms = wp_get_post_terms( $post->ID, 'businesstype' ); ?>
 
             <div class="mix quote <?php foreach( $terms as $term ) echo ' ' . $term->slug; ?>">
-                <a class="pop-link" href="#popup<?php echo ($counter); ?>">
+                <a class="pop-link" id="video<?php echo ($counter); ?>" href="#popup<?php echo ($counter); ?>">
                     <div class="test-image" style="background-image: url(<?php echo $mainImage; ?>)">
                         <?php $contentType = get_field('testimonial_type');?>
-                        <!-- <?php get_template_part("inc/img/quote"); ?> -->
                         <?php if ($contentType == 'video'): ?>
                         <i class="fas fa-play-circle"></i>
                         <?php else:?>
@@ -79,7 +78,8 @@ $counter++;
                         <div class="popup__full">
                             <a href="#testimonial-section" id="popup<?php echo ($counter); ?>" target="_self"
                                 class="popup__close">&times;</a>
-                            <video class="popup<?php echo ($counter); ?>" playsinline controls id="bgvideo">
+                            <video class="popup<?php echo ($counter); ?> video<?php echo ($counter); ?>" playsinline
+                                controls id="bgvideo">
                                 <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
                             </video>
                         </div>
@@ -97,7 +97,8 @@ $counter++;
                                 class="popup__close">&times;</a>
                             <?php $testVideo = get_field('video_file'); ?>
                             <?php if ($testVideo):?>
-                            <video class="popup<?php echo ($counter); ?>" playsinline controls id="bgvideo">
+                            <video class="popup<?php echo ($counter); ?> video<?php echo ($counter); ?>" playsinline
+                                controls id="bgvideo">
                                 <source src="<?php echo $testVideo['url'];?>" type="video/mp4">
                             </video>
                             <?php else:?>

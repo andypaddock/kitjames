@@ -116,15 +116,16 @@
     width: 100%;
   }
   .popup__content {
-    text-align: center;
-    .quote-cite {
+    .quote-cite,
+    .heading-secondary {
       color: $color-primary;
+      text-align: center;
+      display: block;
     }
   }
   blockquote {
     p {
       font-size: 2.5rem;
-      font-weight: 400;
     }
     padding: 3rem;
   }

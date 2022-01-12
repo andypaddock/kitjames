@@ -39,9 +39,8 @@
     @include backgroundCover;
     background-image: linear-gradient(
       0deg,
-      rgba(4, 11, 46, 1) 15%,
-      rgba(4, 11, 46, 0.3) 30%,
-      rgba(4, 11, 46, 0) 100%
+      rgba(4, 11, 46, 0.1) 0,
+      rgba(4, 11, 46, 0.2) 100%
     );
     display: flex;
     flex-direction: column;
@@ -61,6 +60,9 @@
       .heading-tertiary {
         color: $color-white;
       }
+    }
+    .poem-fade {
+      text-align: center;
     }
     .centre-line {
       display: flex;
@@ -83,6 +85,9 @@
     }
     blockquote {
       padding: 0 3rem 3rem;
+      @include respond(phone) {
+        padding: 0;
+      }
     }
     .main_links {
       padding-top: 2vh;
@@ -94,23 +99,20 @@
     top: 0;
     z-index: -1;
     background-size: cover;
-    width: auto;
-    height: 95%;
+    min-width: 100%;
+    min-height: 100%;
     @include respond(phone) {
       width: auto;
       height: 100%;
-    }
-    &::after {
-      background-image: linear-gradient(
-        0deg,
-        rgba(4, 11, 46, 1) 20%,
-        rgba(4, 11, 46, 0) 50%
-      );
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
 .text-fade {
   position: relative;
+  margin-bottom: 7rem;
 
   blockquote {
     margin: 0;
@@ -119,7 +121,11 @@
     right: 2rem;
     left: 2rem;
     top: 50%;
-    transform: translateY(-50%);
+    margin-top: 2rem;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+    // transform: translateY(-50%);
     // text-shadow: 2px 2px 5px rgb(0 0 0 / 40%), 0px 0px 2px rgb(0 0 0 / 40%);
     &:first-of-type {
       animation: quote-fade 3s 1;
@@ -370,9 +376,9 @@ nav {
   // .hidden-xs {
   //   display: block;
   // }
-  .visible-xs {
-    display: none;
-  }
+  // .visible-xs {
+  //   display: none;
+  // }
 }
 .down_arrow {
   text-align: center;
@@ -428,7 +434,7 @@ menu {
       li {
         display: inline-block;
         &.menu-logo a {
-          border: 1px solid $color-white;
+          // border: 1px solid $color-white;
           padding: 0rem 4rem;
           font-size: 2.5rem;
           letter-spacing: 0.3rem;
@@ -442,6 +448,7 @@ menu {
           text-transform: uppercase;
           font-size: 1.5rem;
           letter-spacing: 0.15rem;
+          font-weight: 200;
           &::after {
             content: "";
             display: block;
@@ -490,7 +497,6 @@ menu {
   a {
     color: $color-white;
     font-size: 2.5rem;
-    border: 1px solid $color-white;
     padding: 0.5rem 4rem;
     letter-spacing: 0.3rem;
     text-decoration: none;

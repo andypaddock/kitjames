@@ -24,7 +24,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 1rem;
-      font-size: 5rem;
+      font-size: 4rem;
     }
     /*
         animation-delay: 3s;
@@ -41,6 +41,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 0.5rem;
+      padding: 0 1rem;
     }
   }
 }

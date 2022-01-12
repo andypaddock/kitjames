@@ -10,67 +10,69 @@
 
 
     <?php $footerImage = get_field('footer_image'); ?>
-
-    <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
-        <div class="footer-text-container">
-            <div class="row centre-line w40">
-                <div class="line"></div>
-                <div></div>
-            </div>
-            <div class="row w40">
-                <div class="footer_text">
-                    <h1 class="heading-secondary">
-                        <span class="heading-secondary"><?php the_field('footer_main_text'); ?></span>
-                    </h1>
+    <div class="gradient-footer">
+        <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
+            <div class="footer-text-container">
+                <div class="row centre-line w40">
+                    <div class="line"></div>
+                    <div></div>
+                </div>
+                <div class="row w40">
+                    <div class="footer_text">
+                        <h1 class="heading-secondary">
+                            <span class="heading-secondary"><?php the_field('footer_main_text'); ?></span>
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="footer_link">
-                <?php 
+            <div class="row">
+                <div class="footer_link">
+                    <?php 
 $link = get_field('footer_link');
 if( $link ): 
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
     ?>
-                <a class="footer_button" href="<?php echo esc_url( $link_url ); ?>"
-                    target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><span
-                        class="link-arrow arrow-right"></span></a>
-                <?php endif; ?>
+                    <a class="footer_button" href="<?php echo esc_url( $link_url ); ?>"
+                        target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><span
+                            class="link-arrow arrow-right"></span></a>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
     <?php elseif ($footerSwitch == 'main'):?>
     <?php $footerImage = get_field('footer_image','options'); ?>
-
-    <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
-        <div class="footer-text-container">
-            <div class="row centre-line w40">
-                <div class="line"></div>
-                <div></div>
-            </div>
-            <div class="row">
-                <div class="footer_text  w40">
-                    <h1 class="heading-secondary">
-                        <span class="heading-secondary"><?php the_field('footer_main_text','options'); ?></span>
-                    </h1>
+    <div class="gradient-footer">
+        <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
+            <div class="footer-text-container">
+                <div class="row centre-line w40">
+                    <div class="line"></div>
+                    <div></div>
+                </div>
+                <div class="row">
+                    <div class="footer_text  w40">
+                        <h1 class="heading-secondary">
+                            <span class="heading-secondary"><?php the_field('footer_main_text','options'); ?></span>
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="footer_link">
-                <?php 
+            <div class="row">
+                <div class="footer_link">
+                    <?php 
 $link = get_field('footer_link','options');
 if( $link ): 
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
     ?>
-                <a class="footer_button" href="<?php echo esc_url( $link_url ); ?>"
-                    target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><span
-                        class="link-arrow arrow-right"></span></a>
-                <?php endif; ?>
+                    <a class="footer_button" href="<?php echo esc_url( $link_url ); ?>"
+                        target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><span
+                            class="link-arrow arrow-right"></span></a>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

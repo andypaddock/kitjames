@@ -18,6 +18,9 @@ jQuery(document).ready(function($) {
 });
 
 
+
+
+
 /* TABBED CONTENT */
 
 $(document).ready(function () {
@@ -49,9 +52,25 @@ $(".testimonial-carousel").owlCarousel({
     autoplayHoverPause:true,
 });
 
+$(".fadeOut").owlCarousel({
+  loop:true,
+  margin:48,
+  center:true,
+  nav:false,
+  dots:false,
+  items:1,
+  animateOut: 'fadeOut',
+  autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+});
 
 
-new Readmore('article');
+new Readmore('article', {
+  speed: 150,
+  collapsedHeight: 105,
+});
+
 
 
 // SIDEBAR MOBILEMENU
@@ -138,6 +157,14 @@ if (containerEl) {
          
     });
 }
+
+
+$(".pop-link").click(function(){
+  var id = $(this).attr('id');
+  $('.' + id)[0].play();
+});
+
+
 
 $(".popup__close").click(function(){
   var id = $(this).attr('id');
