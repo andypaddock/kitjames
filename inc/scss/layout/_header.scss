@@ -55,6 +55,9 @@
     .heading-primary {
       line-height: 5rem;
       // text-shadow: 2px 2px 5px rgb(0 0 0 / 40%), 0px 0px 2px rgb(0 0 0 / 40%);
+      @include respond(phone) {
+        padding: 0 2rem;
+      }
     }
     .section-links {
       .heading-tertiary {

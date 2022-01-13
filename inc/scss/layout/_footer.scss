@@ -174,6 +174,11 @@
       column-count: 3;
       li {
         border-left: 1px solid $color-primary;
+        @include respond(phone) {
+          &:nth-of-type(4) a {
+            padding-top: 0;
+          }
+        }
 
         a {
           color: $color-white;
