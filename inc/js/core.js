@@ -47,7 +47,7 @@ $(".testimonial-carousel").owlCarousel({
   nav:true,
   dots:false,
   items:1,
-  autoplay:true,
+  autoplay:false,
     autoplayTimeout:6000,
     autoplayHoverPause:true,
 });
